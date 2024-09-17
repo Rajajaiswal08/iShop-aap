@@ -6,44 +6,43 @@ function Header() {
 
   const addtoogle = () => {
     setToogle(!toogle);
+    // Toggle body scroll
+    document.body.style.overflow = toogle ? 'auto' : 'hidden';
   };
 
   return (
     <>
       {/* Top bar */}
       <div className="w-full mx-auto p-4 border-b">
-  <div className="max-w-[1190px] mx-auto">
-    <div className="flex items-center justify-between">
-      {/* Hidden on mobile, visible on larger screens */}
-      <div className=" space-x-4">
-        <button className="text-lg">EN</button>
-        
-            <span>$</span>
-            <span className="ml-1">USD</span>
-         
-      </div>
+        <div className="max-w-[1190px] mx-auto">
+          <div className="flex items-center justify-between">
+            {/* Hidden on mobile, visible on larger screens */}
+            <div className="space-x-4">
+              <button className="text-lg">EN</button>
+              <span>$</span>
+              <span className="ml-1">USD</span>
+            </div>
 
-      <div className="flex items-center space-x-6">
-        <div className="flex items-center">
-          <span className="mr-2">My profile</span>
+            <div className="flex items-center space-x-6">
+              <div className="flex items-center">
+                <span className="mr-2">My profile</span>
+              </div>
+
+              <div className="flex items-center space-x-2 hidden md:flex">
+                <span>2 Items</span>
+                <span className="text-red-500">$998</span>
+              </div>
+
+              <button className="text-xl">🔍</button>
+            </div>
+          </div>
         </div>
-
-        <div className="flex items-center space-x-2 hidden md:flex">
-          <span>2 Items</span>
-          <span className="text-red-500">$998</span>
-        </div>
-
-        <button className="text-xl">🔍</button>
       </div>
-    </div>
-  </div>
-</div>
-
 
       {/* Logo and Navigation (Desktop) */}
-      <div className="w-full mx-auto bg-[#F6F7F8] z-10"  style={{ position: 'sticky', top: '-2px', left: '0' }}>
+      <div className="w-full mx-auto bg-[#F6F7F8] z-10" style={{ position: 'sticky', top: '0', left: '0', zIndex: '20' }}>
         <div className="max-w-[1090px] mx-auto p-4 border-b">
-          <div className="flex md:justify-center justify-between text-[27px] font-bold  md:flex">
+          <div className="flex md:justify-center justify-between text-[27px] font-bold md:flex">
             <img src="images/1.png" alt="Logo" />
             <button onClick={addtoogle} className="md:hidden">
               🟰
@@ -55,68 +54,41 @@ function Header() {
                 <li className="hover:border-b-2 hover:border-red-500 p-2">
                   <Link to="/">Home</Link>
                 </li>
-                
                 <li className="relative group p-2 hover:border-b-2 hover:border-red-500">
-                  <Link to="/Chakout" >i shop</Link>
+                  <Link to="/Chakout">i shop</Link>
                   <ul className="absolute left-[-150px] top-full mt-2 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300 ease-in-out">
                     <li className="p-2">
-                      <div className="w-[500px] flex  justify-between p-2">
-                        <ul className=" text-xs">
-                          <li className="p-2 hover:bg-gray-100">
-                            Airport & Wireless
-                          </li>
+                      <div className="w-[500px] flex justify-between p-2">
+                        <ul className="text-xs">
+                          <li className="p-2 hover:bg-gray-100">Airport & Wireless</li>
                           <li className="p-2 hover:bg-gray-100">AppleCare</li>
-                          <li className="p-2 hover:bg-gray-100">
-                            Bags,Shells & sleeves
-                          </li>
-                          <li className="p-2 hover:bg-gray-100">
-                            Business & Security
-                          </li>
-                          <li className="p-2 hover:bg-gray-100">
-                            Cables $ Dockes
-                          </li>
+                          <li className="p-2 hover:bg-gray-100">Bags, Shells & Sleeves</li>
+                          <li className="p-2 hover:bg-gray-100">Business & Security</li>
+                          <li className="p-2 hover:bg-gray-100">Cables & Dockers</li>
                         </ul>
-                        <ul className=" text-xs">
-                          <li className="p-2 hover:bg-gray-100">
-                            Comeras & Video{" "}
-                          </li>
-                          <li className="p-2 hover:bg-gray-100">
-                            Car & Travel
-                          </li>
-                          <li className="p-2 hover:bg-gray-100">
-                            Cases & Films
-                          </li>
+                        <ul className="text-xs">
+                          <li className="p-2 hover:bg-gray-100">Cameras & Video</li>
+                          <li className="p-2 hover:bg-gray-100">Car & Travel</li>
+                          <li className="p-2 hover:bg-gray-100">Cases & Films</li>
                         </ul>
-                        <ul className=" text-xs">
-                          <li className="p-2 hover:bg-gray-100">
-                            Charging Devices{" "}
-                          </li>
-                          <li className="p-2 hover:bg-gray-100">
-                            Connected Home
-                          </li>
-                          <li className="p-2 hover:bg-gray-100">
-                            Device & Graphic
-                          </li>
-                          <li className="p-2 hover:bg-gray-100">
-                            Fiteness & Sport
-                          </li>
+                        <ul className="text-xs">
+                          <li className="p-2 hover:bg-gray-100">Charging Devices</li>
+                          <li className="p-2 hover:bg-gray-100">Connected Home</li>
+                          <li className="p-2 hover:bg-gray-100">Device & Graphic</li>
+                          <li className="p-2 hover:bg-gray-100">Fitness & Sport</li>
                         </ul>
-                        <ul className=" text-xs">
-                          <li className="p-2 hover:bg-gray-100">HeadPhone </li>
-                          <li className="p-2 hover:bg-gray-100">Healhkit</li>
-                          <li className="p-2 hover:bg-gray-100">
-                            Music Cetion
-                          </li>
+                        <ul className="text-xs">
+                          <li className="p-2 hover:bg-gray-100">Headphones</li>
+                          <li className="p-2 hover:bg-gray-100">Healthkit</li>
+                          <li className="p-2 hover:bg-gray-100">Music Section</li>
                         </ul>
                       </div>
                     </li>
                   </ul>
                 </li>
-
                 <li className="hover:border-b-2 hover:border-red-500 p-2">
-                  <Link to="/Store">store</Link>
+                  <Link to="/Store">Store</Link>
                 </li>
-            
                 <li className="hover:border-b-2 hover:border-red-500 p-2">
                   <Link to="/Share">Share</Link>
                 </li>
@@ -128,10 +100,12 @@ function Header() {
           </header>
         </div>
       </div>
+
+      {/* Mobile Menu */}
       <header
-        className={`w-full z-20 bg-gradient-to-b from-red-500 to-blue-600 text-white h-screen p-4 md:hidden   ${
-          toogle ? "left-0" : "left-[-100%]"
-        } fixed top-0 `}
+        className={`w-full z-20 bg-gradient-to-b from-red-500 to-blue-600 text-white h-screen p-4 fixed top-0 left-0 transition-transform transform ${
+          toogle ? "translate-x-0" : "-translate-x-full"
+        }`}
       >
         <div className="flex items-center justify-between px-4 py-2">
           <div className="flex items-center space-x-3">
@@ -163,7 +137,6 @@ function Header() {
           <li className="hover:border-b-2 hover:text-gray-300">
             <Link to="/Store">Store</Link>
           </li>
-          
           <li className="hover:border-b-2 hover:text-gray-300">
             <Link to="/Chakout">Checkout</Link>
           </li>
@@ -176,7 +149,7 @@ function Header() {
           <li className="hover:border-b-2 hover:text-gray-300 cursor-pointer">
             <button
               onClick={addtoogle}
-              className={`${toogle ? "left-0" : "left-0"}`}
+              className="text-2xl"
             >
               X
             </button>
