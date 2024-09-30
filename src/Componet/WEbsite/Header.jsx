@@ -43,7 +43,7 @@ function Header() {
       <div className="w-full mx-auto bg-[#F6F7F8] z-10" style={{ position: 'sticky', top: '0', left: '0', zIndex: '20' }}>
         <div className="max-w-[1090px] mx-auto p-4 border-b">
           <div className="flex md:justify-center justify-between text-[27px] font-bold md:flex">
-            <img src="images/29ffede1-398a-44c6-a130-bdba04a31c12.png" alt="Logo" />
+            <img src="../../../images/29ffede1-398a-44c6-a130-bdba04a31c12.png" alt="Logo" />
             <button onClick={addtoogle} className="md:hidden">
               🟰
             </button>

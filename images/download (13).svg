@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="-3 -3 18 18">
 <defs><style>.a{fill:#fff;opacity:0;}.b{fill:#707070;}</style></defs>
     <g transform="translate(4) rotate(135, 3, 3)">
-        <path class="b" d="M8.7,8.238V.468A.468.468,0,0,0,8.232,0H.469A.468.468,0,0,0,.137.8L7.9,8.562a.468.468,0,0,0,.8-.324Z"/>
+        <path className="b" d="M8.7,8.238V.468A.468.468,0,0,0,8.232,0H.469A.468.468,0,0,0,.137.8L7.9,8.562a.468.468,0,0,0,.8-.324Z"/>
     </g>
 </svg>
