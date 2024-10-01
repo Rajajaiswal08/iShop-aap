@@ -18,16 +18,21 @@ function Category() {
   return (
     <div className="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
       <ul className="list-none divide-y divide-gray-200">
+      <Link to="/store">
         <li className="px-6 py-4 hover:bg-gray-100 cursor-pointer">
           <p className="text-lg font-medium">
-            <Link to="/store">All</Link>
+            All
           </p>
         </li>
+        </Link> 
         {categories.map((cat, i) => (
+          
           <li key={i} className="px-6 py-4 hover:bg-gray-100 cursor-pointer">
+            <Link to={`/store/${cat.slug}`}>
             <p className="text-lg font-medium">
-              <Link to={`/store/${cat.slug}`}>{cat.name}</Link>
+              {cat.name}
             </p>
+            </Link>
           </li>
         ))}
       </ul>

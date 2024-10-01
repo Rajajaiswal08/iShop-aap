@@ -5,10 +5,10 @@ import { FaWhatsapp, FaGithub, FaInstagram } from "react-icons/fa";
 function Footer() {
   return (
     <div>
-      <footer className="bg-gray-100 py-10">
-        <div className="max-w-[1200px] mx-auto flex flex-col items-center gap-6 px-4">
+      <footer className="bg-gray-100 py-10 ">
+        <div className="max-w-screen-xl mx-auto flex flex-col items-center gap-6 px-4">
           {/* Upper Section */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pb-10 border-b">
+          <div className="grid grid-cols-1 md:grid-cols-3 px-2 md:px-20 items-center text-center gap-8 pb-10 border-b border-gray-300">
             {/* Left Column - Brand and Description */}
             <div>
               <h2 className="text-3xl font-bold text-gray-700">iSHOP</h2>
